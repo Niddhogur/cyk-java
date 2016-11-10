@@ -17,7 +17,6 @@ public class FileHandler {
 
         BufferedReader br = new BufferedReader(new FileReader(filePath));
         String line = br.readLine();
-
         while (line != null) {
             String[] P = line.split(" -> "); //[0] contains the variable and [1] the production: "S -> AB"
             if (P[1].split(" ").length > 2)
