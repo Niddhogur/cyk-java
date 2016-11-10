@@ -5,11 +5,11 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.stream.Collectors;
 
-public class Grammar {
+public class FncGrammar {
 
     private HashMap<String, ArrayList<String>> rules;
 
-    public Grammar(HashMap<String, ArrayList<String>> rules) {
+    public FncGrammar(HashMap<String, ArrayList<String>> rules) {
         this.rules = rules;
     }
 

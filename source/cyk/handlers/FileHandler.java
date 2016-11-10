@@ -2,7 +2,7 @@ package cyk.handlers;
 
 
 import cyk.grammar.FncException;
-import cyk.grammar.Grammar;
+import cyk.grammar.FncGrammar;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -12,7 +12,7 @@ import java.util.Collections;
 import java.util.HashMap;
 
 public class FileHandler {
-    public static Grammar readFromFile(String filePath) throws IOException, FncException {
+    public static FncGrammar readFromFile(String filePath) throws IOException, FncException {
         HashMap<String, ArrayList<String>> grammar = new HashMap<>();
 
         BufferedReader br = new BufferedReader(new FileReader(filePath));
@@ -30,6 +30,6 @@ public class FileHandler {
             line = br.readLine();
         }
 
-        return new Grammar(grammar);
+        return new FncGrammar(grammar);
     }
 }

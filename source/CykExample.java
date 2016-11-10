@@ -1,5 +1,5 @@
 import cyk.grammar.FncException;
-import cyk.grammar.Grammar;
+import cyk.grammar.FncGrammar;
 import cyk.handlers.FileHandler;
 
 import java.io.IOException;
@@ -9,7 +9,7 @@ public class CykExample {
     public static void main(String[] args) {
 
         try {
-            Grammar grammar = FileHandler.readFromFile(args[0]);
+            FncGrammar grammar = FileHandler.readFromFile(args[0]);
 
             System.out.println((grammar.isAccepted(args[1])) ? "SIM" : "NÃO");
 

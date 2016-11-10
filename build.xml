@@ -24,7 +24,11 @@
         <!-- Create the distribution directory -->
         <mkdir dir="${dist}"/>
 
-        <jar jarfile="${dist}/Cyk.jar" basedir="${build}"/>
+        <jar jarfile="${dist}/Cyk.jar" basedir="${build}">
+            <manifest>
+                <attribute name="Main-Class" value="CykExample"/>
+            </manifest>
+        </jar>
     </target>
 
     <target name="clean"
